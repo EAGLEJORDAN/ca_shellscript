@@ -1,0 +1,22 @@
+#!/bin/bash
+#comparer les trois tableaux suivants:
+a=( 3 5 8 10 6 )
+b=( 6 5 4 12 )
+c=( 14 7 5 7 )
+#comparaison d'abord du tableau a au tableau b
+for d in ${a[@]}; do 
+ for e in ${b[@]};do 
+  if [ $d == $e ]; then
+   ab[${#ab[@]}]=$d
+  fi
+ done
+done
+
+#comparaison du tableau ab au tableau c
+for f in ${ab[@]}; do 
+ for g in ${c[@]}; do 
+  if [ $f == $g ]; then
+   echo $f
+  fi
+ done
+done 
