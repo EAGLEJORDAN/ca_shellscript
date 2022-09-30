@@ -1,0 +1,8 @@
+#!/bin/bash
+# Calculer le prix total d'un panier de fruit contenant 1 pomme, 2 bananes, et 3 melons. Ci_dessous le tarif des fruits.
+COST_PINEAPPLE=50
+COST_BANANA=4
+COST_WATERMELON=23
+COST_BASKET=1
+TOTAL=$(( 1*$COST_PINEAPPLE + 2*$COST_BANANA + 3*$COST_WATERMELON + $COST_BASKET ))
+echo "Le prix total d'un panier de fruit est :$TOTAL" 
