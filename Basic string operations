@@ -1,0 +1,20 @@
+#!/bin/bash
+BUFFETT="Life is like a snowball. The important thing is finding wet snow and a really long hill"
+ISAY=$BUFFETT
+
+#change1 remplacer snow par foot
+change1=${ISAY[@]/snow/foot}
+
+#change2 effacer le deuxième snow
+change2=${change1[@]// snow/}
+
+#change3 remplacer finding par getting
+change3=${change2[@]/finding/getting}
+
+#change4 effacer tout les caractère après wet
+positionw=`expr index "$change3" "w"`
+change4=${change3:0:$positionw + 3}
+ISAY=$change4
+
+echo $ISAY
+echo $BUFFETT
